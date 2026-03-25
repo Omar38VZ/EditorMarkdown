@@ -9,7 +9,7 @@ app.on('ready', () => {
         height: 600,
         webPreferences: {
             nodeIntegration: true,
-            contextIsolation: false // Le agregue esta linea porque en las nuevas versiones de electron no funciona sin ella ya que es una medida de seguridad
+            contextIsolation: false
         }
     });
     window.loadFile('index.html');

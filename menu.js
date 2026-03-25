@@ -14,7 +14,7 @@ function saveFile() {
     console.log('Saving the file');
 
     const window = BrowserWindow.getFocusedWindow();
-    if(window) window.webContents.send('editor-event', 'save');
+    if (window) window.webContents.send('editor-event', 'save');
 }
 
 function loadFile() {
@@ -23,7 +23,6 @@ function loadFile() {
         properties: ['openFile'],
         title: 'Pick a markdown file',
         filters: [{ name: 'Markdown', extensions: ['md', 'markdown', 'txt'] }]
-
     });
     if (!files) return;
 
@@ -96,7 +95,7 @@ const template = [
                 label: 'Toggle Bold',
                 click() {
                     const window = BrowserWindow.getFocusedWindow();
-                    if(window) window.webContents.send('editor-event', 'toggle-bold');
+                    if (window) window.webContents.send('editor-event', 'toggle-bold');
                 }
             }
         ]
@@ -122,7 +121,6 @@ if (process.env.DEBUG) {
                 label: 'Dev Tools',
                 role: 'toggleDevTools'
             },
-
             { type: 'separator' },
             {
                 role: 'reload',

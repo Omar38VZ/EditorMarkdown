@@ -64,7 +64,6 @@
                     if (file.type === 'text/markdown' || file.name.endsWith('.md')) {
                         var reader = new FileReader();
                         reader.onload = e => {
-                            // console.log(e.target.result);
                             editor.codemirror.setValue(e.target.result);
                         };
 
